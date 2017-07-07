@@ -1,13 +1,15 @@
 {
   "name": "GTMetrixExtension",
   "version": "1.0.0",
-  "description": "",
+  "description": "Page speed test using Google's PageSpeed API. Gives overall rating, suggestions for making page loading process more efficient, and page resource breakdown.",
   "main": "popup.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --colors",
+    "dev": "webpack --progress --colors --watch"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["speed","test","pagespeed", "PageSpeed", "page", "efficiency"],
+  "author": "Michael Chen",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",

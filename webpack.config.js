@@ -1,7 +1,6 @@
 require('dotenv').config();
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var webpack = require('webpack');
-console.log(process.env.API_KEY);
 
 module.exports = {
     entry: "./popup.js",
