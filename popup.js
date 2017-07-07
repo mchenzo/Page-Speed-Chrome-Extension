@@ -20,14 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         suggestionsButton.addEventListener('click', function() {
             //toggling between hiding and showing suggestions
             if (!hideIt) {
-                for (var i = 0; i < suggestionList.length; i++) {
-                    suggestionList[i].style.display = 'block';
-                }
+                    suggestionList[0].style.display = 'block';
                 hideIt = true;
             } else {
-                for (var i = 0; i < suggestionList.length; i++) {
-                    suggestionList[i].style.display = 'none';
-                }
+                    suggestionList[0].style.display = 'none';
                 hideIt = false;
             }
         });
