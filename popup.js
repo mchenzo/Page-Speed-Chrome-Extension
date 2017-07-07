@@ -71,12 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
             progress.style.display = 'block';
         }
 
-        function initSuggestion() {
-            var butt = document.getElementById('suggestions');
-            butt.style.display = 'block';
-        }
-
-        function initBreakdown() {
+        function initButtons() {
+            var button = document.getElementById('suggestions');
+            button.style.display = 'block';
             var butt2 = document.getElementById('breakdown');
             butt2.style.display = 'block';
         }
@@ -147,8 +144,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 ul.insertBefore(r, null);
             }
             if (ul.hasChildNodes()) {
-                var be4 = document.getElementById('breakdown');
-                document.body.insertBefore(ul, be4);
+                var before = document.getElementById('breakdown');
+                document.body.insertBefore(ul, before);
             } else {
                 var div = document.createElement('div');
                 div.className = 'noFixes';
@@ -209,9 +206,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 'chds=0,' + largestSingleCategory,
             ].join('&');
             var i = document.createElement('img');
-            var be4 = document.getElementById('analysisChart');
+            var before = document.getElementById('analysisChart');
             i.src = 'http://chart.apis.google.com/chart?' + query;
-            document.body.insertBefore(i, be4);
+            document.body.insertBefore(i, before);
         };
 
 
@@ -225,15 +222,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             axios.get(API_URL, { params: queryParams }) //
                 .then(function(response) {
-                    console.log('response object', response);
                     doneLoading();
                     initBar();
-                    initSuggestion();
-                    initBreakdown();
+                    initButtons();
                     bar.animate(response.data.ruleGroups.SPEED.score / 100);
                     displayTopPageSpeedSuggestions(response.data);
                     displayResourceSizeBreakdown(response.data);
-                    console.log(response.data.pageStats.cssResponseBytes);
                 })
                 .catch(function(error) {
                     console.error('Ya done goofed!', error)
