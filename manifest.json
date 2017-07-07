@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "GTmetrix Analyzer Plugin",
-  "description": "This extension will analyze a page using GTmetrix",
+  "name": "PageSpeed Test Extension",
+  "description": "This extension will analyze a page using Google's PageSpeed API",
   "version": "1.0",
 
   "browser_action": {

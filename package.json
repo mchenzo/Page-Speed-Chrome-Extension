@@ -1,5 +1,5 @@
 {
-  "name": "GTMetrixExtension",
+  "name": "PageSpeed Test Extension",
   "version": "1.0.0",
   "description": "Page speed test using Google's PageSpeed API. Gives overall rating, suggestions for making page loading process more efficient, and page resource breakdown.",
   "main": "popup.js",
